@@ -1,0 +1,48 @@
+.product {
+  /* width: 100vw; */
+  padding: 2.5rem;
+  background-color: var(--color-dark--1);
+  /* min-height: calc(100vh - 5rem); */
+  height: 100vh;
+}
+
+.product section {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+  justify-content: space-around;
+}
+
+.product img {
+  width: 400px;
+  /* width: 100%; */
+}
+.product .section {
+  width: 400px;
+}
+
+.product h2 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 3rem;
+}
+
+.product p {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.product section a {
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .product {
+    height: 150%;
+    /* width: 100vw; */
+  }
+
+  .product img {
+    width: 350px;
+  }
+}
