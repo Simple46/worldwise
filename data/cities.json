@@ -107,6 +107,18 @@
         "lng": "-4.548339843750001"
       },
       "id": "GHy5ljLJU8A"
+    },
+    {
+      "cityName": "Plasenzuela",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "notes": "",
+      "date": "2026-05-01T07:42:10.837Z",
+      "position": {
+        "lat": "39.402244340292775",
+        "lng": "-6.064453125000001"
+      },
+      "id": "tJzoopnCpmw"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
