@@ -44,6 +44,7 @@ function Map() {
   return (
     <>
       <div className={styles.mapContainer}>
+        {/* <input type="text" className={styles.input} /> */}
         {!geolocationPosition && (
           <Button type="position" onClick={getPosition}>
             {isLoadingPosition ? "Loading....." : "Use Your Position"}

@@ -83,6 +83,30 @@
         "lng": "1.5161132812500002"
       },
       "id": "qOB5-dKXfn8"
+    },
+    {
+      "cityName": "Ile-Ife",
+      "country": "Nigeria",
+      "emoji": "🇳🇬",
+      "notes": "",
+      "date": "2026-04-13T21:11:46.326Z",
+      "position": {
+        "lat": "7.449624260197829",
+        "lng": "4.614257812500001"
+      },
+      "id": "3mhGdF_MPHU"
+    },
+    {
+      "cityName": "Arroba de los Montes",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "notes": "",
+      "date": "2026-05-01T07:33:18.806Z",
+      "position": {
+        "lat": "39.18117526158749",
+        "lng": "-4.548339843750001"
+      },
+      "id": "GHy5ljLJU8A"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

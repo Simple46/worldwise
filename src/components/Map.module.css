@@ -5,6 +5,14 @@
   position: relative;
 }
 
+.input{
+  width: 10rem;
+  position: absolute;
+  top: 3rem;
+  left: 5rem;
+  z-index: 200000;
+}
+
 .map {
   height: 100%;
 }

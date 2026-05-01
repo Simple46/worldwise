@@ -1,9 +1,9 @@
 import {
-  useState,
   useEffect,
   createContext,
   useContext,
   useReducer,
+  useCallback,
 } from "react";
 // import { set } from "react-datepicker/dist/dist/date_utils.js";
 
@@ -65,7 +65,8 @@ function reducer(state, action) {
   }
 }
 
-const BASE_URL = "http://localhost:9000";
+const BASE_URL =
+  "https://worldwise-1-i0yf.onrender.com" || "http://localhost:9000";
 
 function CitiesProvider({ children }) {
   // const [cities, setCities] = useState([]);
@@ -95,20 +96,23 @@ function CitiesProvider({ children }) {
 
   // const [currentCity, setCurrentCity] = useState({});
 
-  async function getCity(id) {
-    if (Number(id) === currentCity.id) return;
-    dispatch({ type: "loading" });
-    try {
-      const res = await fetch(`${BASE_URL}/cities/${id}`);
-      const data = await res.json();
-      dispatch({ type: "city/loaded", payload: data });
-    } catch (err) {
-      dispatch({
-        type: "rejected",
-        payload: "Error in loading the city .....",
-      });
-    }
-  }
+  const getCity = useCallback(
+    async function getCity(id) {
+      if (Number(id) === currentCity.id) return;
+      dispatch({ type: "loading" });
+      try {
+        const res = await fetch(`${BASE_URL}/cities/${id}`);
+        const data = await res.json();
+        dispatch({ type: "city/loaded", payload: data });
+      } catch (err) {
+        dispatch({
+          type: "rejected",
+          payload: "Error in loading the city .....",
+        });
+      }
+    },
+    [currentCity.id],
+  );
 
   async function createCity(newCity) {
     dispatch({ type: "loading" });
